@@ -17,4 +17,11 @@ _____________________________________
    com relatórios e gráficos de dados gerais dos cursos(média de nota total, média de evasão)
    em cada curso
 
-
+# Cronograma (planing poker)
+____________________________
+1. protótipação da página das páginas (8h)
+2. desenvolvimento da página de login (2h)
+3. desenvolvimento da página de dashboard do coordenador do curso(8h)
+4. desenvolvimento da página de consultar aluno (5h)
+5. desenvolvimento da página de dashboard do diretor do curso(8h)
+6. desenvolvimento da página de consultar aluno e curso (6h)
