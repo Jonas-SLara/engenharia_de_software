@@ -1,22 +1,25 @@
 # engenharia_de_software
-*Grupo* Jonas lara, Bruno Munizz
+*Grupo* Jonas lara, Bruno Munizz, Lucas Rosa
 # Histórias do usuário (casos de uso)
 _____________________________________
-1. Cordenador do curso e o Diretor do curso querem fazer um login para serem
-   redirecionados para suas devidas páginas
+1. Coordenador do curso, Diretor do centro e Admin querem fazer um login para serem
+   redirecionados para suas devidas páginas de consultas e relatórios
    
 2. Depois dos usuarios fazerem o login deve ser feito a verificação e exibir uma
-   mensagem de erro para o usuario se os dados forem inválidos
+   mensagem de erro para o usuário se os dados forem inválidos
    
-3. coordenador do curso e o diretor do politécnico quer ter a visão dos alunos de
-   acordo com seus privelégios para saber o  nome, matricula, curso, média da nota
+3. os usuarios do sistema querem ter a visão dos alunos de
+   acordo com seus privelégios para saber o  nome, mátricula, curso, média da nota
    por disciplina, faltas por disciplinas e probabilidade de evasão;
    
-4. coordenador do curso e diretor do politécnico querem ter a visão geral do curso
-   de acordo com seus privelégios para saber a média das notas e evasão da disciplina
+4. Coordenador do curso  quer ter a visão geral dos alunos do seu curso
+   e filtrar por disciplina, turma e semestre saber a média da evasão das disciplinas
    
-5. Diretor do politécnico e coordenador do curso querem ter filtros para alunos por
-   curso, turma e disciplina de acordo com os privelégios
+5. O Diretor do centro quer ter a visão geral dos alunos do seu centro para filtar por
+   curso, disciplina, turma e semestre para gerar o relatório da taxa de evasão
+
+7. O admin quer ter a visão geral dos alunos da sua universidade para filtar por centro,
+    curso, disciplina, turma e semestre para gerar o relatório da taxa de evasão
 
 # Cronograma (planing poker)
 ____________________________
