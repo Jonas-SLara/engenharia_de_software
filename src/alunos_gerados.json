@@ -1,0 +1,79 @@
+[
+    {
+        "nome": "Luigi Carvalho",
+        "curso": "Enfermagem",
+        "matrícula": 201376672,
+        "probabilidade_evasao": 1.0,
+        "centro": "Politécnico"
+    },
+    {
+        "nome": "Joana Mendes",
+        "curso": "Engenharia Civil",
+        "matrícula": 206533397,
+        "probabilidade_evasao": 0.878,
+        "centro": "CT"
+    },
+    {
+        "nome": "Joaquim Freitas",
+        "curso": "Física",
+        "matrícula": 202710378,
+        "probabilidade_evasao": 0.079,
+        "centro": "CCNE"
+    },
+    {
+        "nome": "Alexandre Viana",
+        "curso": "Direito",
+        "matrícula": 203631208,
+        "probabilidade_evasao": 0.893,
+        "centro": "Politécnico"
+    },
+    {
+        "nome": "Joana Fernandes",
+        "curso": "Física",
+        "matrícula": 209477602,
+        "probabilidade_evasao": 0.433,
+        "centro": "CCNE"
+    },
+    {
+        "nome": "Maria Alice Rodrigues",
+        "curso": "Enfermagem",
+        "matrícula": 202507501,
+        "probabilidade_evasao": 0.175,
+        "centro": "Politécnico"
+    },
+    {
+        "nome": "Davi Lucca da Cunha",
+        "curso": "Arquitetura",
+        "matrícula": 206136926,
+        "probabilidade_evasao": 0.891,
+        "centro": "CT"
+    },
+    {
+        "nome": "Maria Clara Pereira",
+        "curso": "Economia",
+        "matrícula": 202598654,
+        "probabilidade_evasao": 0.476,
+        "centro": "CCNE"
+    },
+    {
+        "nome": "Sra. Isabella Moraes",
+        "curso": "Física",
+        "matrícula": 209802201,
+        "probabilidade_evasao": 0.359,
+        "centro": "CT"
+    },
+    {
+        "nome": "Igor Teixeira",
+        "curso": "Educação Física",
+        "matrícula": 202326002,
+        "probabilidade_evasao": 0.223,
+        "centro": "CCSH"
+    },
+    {
+        "nome": "Bruna Gomes",
+        "curso": "Sociologia",
+        "matrícula": 201064051,
+        "probabilidade_evasao": 0.149,
+        "centro": "CCSH"
+    }
+]

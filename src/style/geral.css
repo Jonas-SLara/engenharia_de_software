@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding:0; 
+
+}
+
+section#dashboard{
+    background-color: rgb(215, 216, 216);
+    width: 100%;
+    height: 90svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container__dashboard{
+    background-color: rgb(255, 255, 255);
+    width: 60%;
+    height: 80%;
+    border-radius: 16px;
+}
+
+/* container de toda a linha */
+.filtro-wrapper {
+    width: 100%;
+    background-color: #e6f0f8;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+  
+  /* container interno com os elementos */
+  .filtro-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  select {
+    padding: 4px 8px;
+    border: 2px solid black;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  
+  button#gerar-btn {
+    background-color: #004b87;
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  button#gerar-btn:hover {
+    background-color: #003b6f;
+  }
+  input[type="text"] {
+    padding: 6px 10px;
+    font-size: 14px;
+    border: 2px solid black;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background-color: white;
+  }
+  
+  input[type="text"]:focus {
+    border-color: #004b87;
+    box-shadow: 0 0 4px rgba(0, 75, 135, 0.5);
+  }
+
+.graficos-dashboard{
+    width: 100%;
+    height: 75%;
+}
+  .grafico-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .legenda {
+    text-align: left;
+  }
+  
+  .legenda .item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 24px;
+  }
+  
+  .legenda .cor {
+    width: 30px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 3px;
+  }
+  
+  .verde {
+    background-color: #788d4d;
+    text-align: center;
+    color: white;
+  }
+  
+  .laranja {
+    background-color: #f4a33b;
+    text-align: center;
+    color: white;
+  }
+  
+  .vermelho {
+    background-color: #eb4b4b;
+    text-align: center;
+    color: white;
+  }
+  
+  .grafico {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    gap: 24px;
+    width: 300px;
+    height: 260px;
+  }
+  
+  .barra {
+    width: 40px;
+    border-radius: 4px 4px 0 0;
+  }
+  
+  .base {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 16px;
+    background-color: #3e4249;
+    border-radius: 4px;
+    z-index: 0;
+  }
+  
+  .porcentagem {
+    text-align: center;
+    font-weight: bold;
+    font-size: 32px;
+  }
+  .numero_grafico{
+    
+  }
