@@ -1,105 +1,66 @@
-<!doctype html>
-<html lang="pt-br">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dashboard - Reitor</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-    <link rel="stylesheet" href="../style/geral.css">
-
-    <script src="../script/dash.js" defer></script>
-  </head>
-  <body>
-
-    <nav class="navbar navbar-expand-lg" style="background-color: #014F87; color: white; padding: 20px;">
-      <div class="container-fluid">
-        <a class="navbar-brand" style="color: white; font-size: 32px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" href="#">EVASÔMETRO</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="#" style="color: white; font-size: 24px; padding: 16px 0px 0 96px;">Home</a>
-            <a class="nav-link" href="#" style="color: white; font-size: 24px; padding: 16px 0 0 96px;">Consultar Aluno</a>
-            <!--AQIO TA O NOME, QUE VAI SER UMA VAR-->
-            <a class="nav-link" href="" style="color: white; height: 70px; width: 70px; padding: 0 0 0 980px; margin: 0;"><img style="color: white; height: 70px; width: 70px; "
-              src="../img/icon__msg.png" alt=""></a>
-              <a class="nav-link" href="../login.html" style="color: white; height: 70px; width: 70px; padding: 0 0 0 100px; margin: 0;"><img style="color: white; height: 70px; width: 70px; "
-                src="../img/icon__saida.png" alt=""></a>
-          </div>
-        </div>
-      </div>
+  <link rel="stylesheet" href="../style/geral.css">
+  <link rel="stylesheet" href="../style/dash.css">
+  <script src="../script/dash.js" defer></script>
+</head>
+<body>
+    <!-- Nav Bar -->
+    <nav class="navBar">
+        <ul>
+            <li>
+                <a href="./dashboard.html" class="currentPage">
+                Evasometro
+                </a>
+            </li>
+             <li>
+                <a href="./consultarAluno.html">
+                Consultar Aluno
+                </a>
+            </li>
+            <li>
+                <a href="../login.html">
+                Sair
+                </a>
+            </li>
+        </ul>
     </nav>
 
+    <!-- interface com graficos -->
     <main>
-      <section id="dashboard">
-          <div class="container__dashboard">
-            <div class="filtro-wrapper">
-              <div class="filtro-container">
 
-                <label for="semestre">Semestre:</label>
-                <select id="semestre" name="semestre">
-                  <option value="1">1º</option>
-                  <option value="2">2º</option>
-                  <option value="3">3º</option>
-                  <option value="4">4º</option>
-                  <option value="5">5º</option>
-                  <option value="6">6º</option>
-                  <option value="7">7º</option>
-                  <option value="8">8º</option>
-                  <option value="9">9º</option>
-                  <option value="10">10º</option>
-                </select>
+     <!-- seção com os filtros -->   
+     <section class="filter">
 
-                <label for="curso">Curso:</label>
-                <select id="curso" name="curso">
-                  <option value="Enfermagem" selected>Enfermagem</option>
-                </select>
-                
-                <label for="centro">Centro:</label>
-                <select id="centro" name="curso">
-                  <option value="Politécnico" selected>Politécnico</option>
-                </select>
+        <!--filtro do centro-->
+        <div class="select">
+            <label for="centro">Centro:</label>
+            <select id="centro">
+                <option value="Todos">Todos</option>
+            </select>
+        </div>
+        <br>
+        <!--filtro do curso-->
+        <div class="select">
+            <label for="curso">Curso:</label>
+            <select id="curso">
+                <option value="Todos">Todos</option>
+            </select>
+        </div>
 
-                <br>
-                <button id="gerar-btn">Gerar Gráfico</button>
-              </div>
-          </div>
+     </section>
 
-          <div class="graficos-dashboard">
-                
-                <div class="grafico">
-                    <div class="barra vermelho" style="height: 50%; width: 100px;"><p class="numero_grafico">6</p></div>
-                    <div class="barra laranja" style="height: 75%; width: 100px"><p class="numero_grafico">8</p></div>
-                    <div class="barra verde" style="height: 220px; width: 100px"><p class="numero_grafico">16</p></div>
-                    <div class="base"></div>
-                </div>
+     <!-- seção com os gráficos -->
+     <section class="grafic">
+        <div class="grafico_pizza">
 
-                <div class="legenda">
-                    <div class="item">
-                    <div class="cor verde"></div>
-                    <span>ALUNOS SEM RISCO DE EVASÃO (75% - 100%)</span>
-                    </div>
-                    <div class="item">
-                    <div class="cor laranja"></div>
-                    <span>ALUNOS COM RISCO DE EVASÃO MODERADA (50% - 74%)</span>
-                    </div>
-                    <div class="item">
-                    <div class="cor vermelho"></div>
-                    <span>ALUNOS COM RISCO DE EVASÃO ALTA (0% - 49%)</span>
-                    </div>
-
-                    <div class="porcentagem">
-                        <strong>PORCENTAGEM DE RISCO DE EVASÃO DESSA TURMA: 59%</strong>
-                    </div>
-                </div><!-- GRAFICOS DASHBOARD -->
-
-            </div> <!-- CONTAINER DASHBOARD -->
-      </section>
-
+        </div>
+     </section>
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
-  </body>
+</body>
 </html>
