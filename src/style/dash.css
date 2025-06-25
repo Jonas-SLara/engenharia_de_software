@@ -44,3 +44,18 @@ section{
     border-radius: 8px;
     border: none;
 }
+
+.grafico_pizza {
+    width: 80%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+#graficoEvasao {
+    
+    width: 100%;
+    height: 100%;
+}
