@@ -13,9 +13,13 @@
 <body>
     <!--Nav Bar-->
     <nav class="navBar">
+        
         <ul>
             <li>
-                <a href="#">
+                <img class="logoo" src="./img/logo.jpg" alt="logo evasometro">
+            </li>
+            <li>
+                <a href="./index.html">
                 Evasometro
                 </a>
             </li>
@@ -27,21 +31,24 @@
         </ul>
     </nav>
 
-    <section class="main">
+    <section class="main section2">
             <div class="div__container__login">
-                    <img src="img/user__grande.png" alt="" class="user__grande">
+                    <img src="./img/user__grande.png" alt="" class="user__grande">
                     <p class="container__text">Login</p>
 
                     <form id="login_form">
 
                         <div class="input-wrapper">
-                            <img src="img/user.png" alt="ícone usuário" />
+                            <img src="./img/user.png" alt="ícone usuário" />
                             <input id="matricula" type="text" class="input__text" placeholder="Matricula" />
                         </div>
 
                         <div class="input-wrapper">
-                            <img src="img/cadeado.png" alt="ícone senha" />
-                            <input id="senha" type="text" class="input__text" placeholder="Senha" />
+                            <img src="./img/cadeado.png" alt="ícone senha" />
+                            <input id="senha" type="password" class="input__text" placeholder="Senha" />
+                            <span class="toggle-password" id="toggleSenha">
+                                <img src="./img/olho_fechado.png" alt="eye">
+                            </span>
                         </div>
 
                         <button class="btn" id="btn_login" type="submit">Entrar</button>

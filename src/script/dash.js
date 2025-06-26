@@ -19,37 +19,6 @@ async function carregarDados() {
 }
 
 
-//FILTRAR ALUNOS SELECIONADOS
-const filtrarAlunos = (cursoSelecionado=null, centroSelecionado=null)=>{
-    if(alunos.length === 0){
-        console.log("lista de alunos ainda não carregada")
-        return;
-    }
-
-    const filtrados = alunos.filter(aluno => {
-        const acerto1 = cursoSelecionado ? aluno.curso === cursoSelecionado : true;
-        const acerto2 = centroSelecionado ? aluno.centro === centroSelecionado : true;
-        return acerto1 && acerto2; //ambos devem ter o mesmo parametro
-    });
-
-    if(filtrados.length===0){
-        console.log("nenhum aluno encontrado com este filtro");
-        atualizarGrafico([]);//limpa o grafico
-        return;
-    }
-
-    console.log("Alunos filtrados:");
-
-    filtrados.forEach(aluno => {
-        console.log(`Nome: ${aluno.nome}`);
-        console.log(`Curso: ${aluno.curso}`);
-        console.log(`Centro: ${aluno.centro}`);
-        console.log(`Evasão: ${(aluno.probabilidade_evasao * 100).toFixed(1)}%`);
-        console.log('---');
-    });
-    return filtrados;
-}
-
 //PREENCHE O SELECT CENTRO COM OS VALORES
 const preencherCentros = ()=>{
     const select = document.getElementById('centro');
@@ -173,22 +142,24 @@ const desenharGrafico = (labels, dados) => {
           data: dados,
           backgroundColor: gerarCores(dados.length),
           borderColor: '#ffffff',
-          borderWidth: 1
+          borderWidth: 1,
         }]
       },
       options: {
         responsive: true,
         maintainAspectRatio: false,
         animation: {
-          duration: 2000,
+          duration: 1000,
           easing: 'easeOutQuart'
         },
         plugins: {
           title: {
             display: true,
             text: `Evasão Média: ${evasaoMedia.toFixed(1)}%`,
+            color: '#ffffff',
             font: {
-              size: 18
+              size: 18,
+              weight: 'bold'
             }
           },
           legend: {
@@ -199,7 +170,21 @@ const desenharGrafico = (labels, dados) => {
           y: {
             beginAtZero: true,
             ticks: {
-              callback: value => value + '%'
+              callback: value => value + '%',
+              color: '#ffffff',
+              font:{
+                weight:'bold'
+              }
+            }
+          },
+          x: {
+            beginAtZero: true,
+            ticks: {
+              callback: value => value + '%',
+              color: '#ffffff',
+              font:{
+                weight:'bold'
+              }
             }
           }
         }
@@ -215,6 +200,8 @@ const desenharGrafico = (labels, dados) => {
     grafico.update(); // <- aqui a mágica acontece
   }
 };
+
+
 
 (async ()=>{
     await carregarDados();

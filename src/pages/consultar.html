@@ -7,21 +7,19 @@
 
   <link rel="stylesheet" href="../style/geral.css">
   <link rel="stylesheet" href="../style/dash.css">
-
-  <script src="../script/chart.umd.min.js" defer></script>
-  <script src="../script/dash.js" defer></script>
+    <script src="../script/consulta.js" defer></script>
 </head>
 <body>
     <!-- Nav Bar -->
     <nav class="navBar">
         <ul>
             <li>
-                <a href="./dashboard.html" class="currentPage">
+                <a href="./dashboard.html">
                 Evasometro
                 </a>
             </li>
              <li>
-                <a href="./consultar.html">
+                <a class="currentPage" href="./consultar.html">
                 Consultar Aluno
                 </a>
             </li>
@@ -47,6 +45,7 @@
             </select>
         </div>
         <br>
+
         <!--filtro do curso-->
         <div class="select">
             <label for="curso">Curso:</label>
@@ -54,14 +53,31 @@
                 <option value="Todos">Todos</option>
             </select>
         </div>
+        <br>
+         <!-- filtro da matricula -->
+        <div class="select">
+            <label for="matricula">Matricula:</label>
+            <input id="matricula" type="text" value="">
+        </div>
 
      </section>
 
-     <!-- seção com os gráficos -->
+     <!-- seção com retorno da pesquisa -->
      <section class="grafic">
-        <div class="grafico_pizza">
-            <canvas id="graficoEvasao"></canvas>
-        </div>
+       <table class="tabelao">
+            <thead>
+                <tr>
+                    <th>Nome:</th>
+                    <th>Curso:</th>
+                    <th>Centro:</th>
+                    <th>% Evasão:</th>
+                    <th>Matrícula:</th>
+                </tr>
+            </thead>
+            <tbody id="consulta">
+
+            </tbody>
+       </table>
      </section>
     </main>
 </body>

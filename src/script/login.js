@@ -31,3 +31,14 @@ const tratar_submit_login = (event) => {
 }
 
 formulario_login.addEventListener("submit", tratar_submit_login);
+
+const senhaInput = document.getElementById("senha");
+const toggleSenha = document.getElementById("toggleSenha");
+const olhoImg = toggleSenha.querySelector("img");
+
+  toggleSenha.addEventListener("click", () => {
+    const isOculta = senhaInput.type === "password";
+    senhaInput.type = isOculta ? "text" : "password";
+    olhoImg.src = isOculta ? "./img/olho.png" : "./img/olho_fechado.png";
+    olhoImg.alt = isOculta ? "esconder senha" : "mostrar senha";
+  });

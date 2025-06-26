@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Evasometro</title>
+    
+    <link rel="stylesheet" href="style/geral.css">
+    <link rel="stylesheet" href="style/login.css">
+</head>
+<body>
+    <!--Nav Bar-->
+    <nav class="navBar">
+        
+        <ul>
+            <li>
+                <img class="logoo" src="./img/logo.jpg" alt="logo evasometro">
+            </li>
+            <li>
+                <a class="currentPage" href="./index.html">
+                Evasometro
+                </a>
+            </li>
+            <li>
+                <a href="./login.html">
+                Login
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="main section2" >
+        <div class="carrosel-container" id="carrosel">
+            <div class="slide fade">
+                <img src="./img/slide1.jpg" alt="Slide 1">
+            </div>
+            <div class="slide fade">
+                <img src="./img/slide2.jpg" alt="Slide 2">
+            </div>
+            <div class="slide fade">
+                <img src="./img/slide3.jpg" alt="Slide 3">
+            </div>
+
+            <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a>
+        </div>
+    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        const carrosel = document.getElementById('carrosel');
+        carrosel.innerHTML = `
+            <div class="carrosel-container">
+            <div class="slide fade"><img src="./img/slide1.jpg" alt="Slide 1"></div>
+            <div class="slide fade"><img src="./img/slide2.jpg" alt="Slide 2"></div>
+            <div class="slide fade"><img src="./img/slide3.jpg" alt="Slide 3"></div>
+            <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a>
+            </div>
+        `;
+
+        let slideIndex = 0;
+        const showSlides = () => {
+            const slides = document.querySelectorAll(".slide");
+            slides.forEach(slide => slide.style.display = "none");
+            slideIndex++;
+            if (slideIndex > slides.length) slideIndex = 1;
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 4000); // troca automática a cada 4s
+        };
+        showSlides();
+
+        // controle manual
+        document.querySelector('.prev').addEventListener('click', () => changeSlide(-1));
+        document.querySelector('.next').addEventListener('click', () => changeSlide(1));
+
+        function changeSlide(n) {
+            const slides = document.querySelectorAll(".slide");
+            slides.forEach(slide => slide.style.display = "none");
+            slideIndex += n;
+            if (slideIndex > slides.length) slideIndex = 1;
+            if (slideIndex < 1) slideIndex = slides.length;
+            slides[slideIndex - 1].style.display = "block";
+        }
+        });
+    </script>
+</body>
+</html>
